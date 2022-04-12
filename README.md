@@ -1,3 +1,8 @@
+Original Authors
+===========
+credit: https://github.com/smpo/socialmedia
+
+
 Social Media Ostracism
 ======================
 
