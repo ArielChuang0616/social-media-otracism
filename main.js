@@ -15,7 +15,7 @@ $(function() {
   window.interval_name = 0;
   window.interval_avatar = 0;
   window.interval_text = 0;
-  window.click = 0;
+  window.click = [];
 
   // ------------
   
@@ -39,7 +39,7 @@ $(function() {
 	
 	// **Tasklength**     
     // Length of the group introduction task in milliseconds. Can be changed to any number (in ms). Default: 180000 (3min) 
-    settings.tasklength = 180000; 
+    settings.tasklength = 1800; 
 
 	
 	// **Number** **of** **"likes"**    
@@ -319,8 +319,8 @@ $(function() {
 
     // Initialize like buttons
 	  $('.btn-like').on('click', function() {
-      window.click = window.click + 1;
-      console.log(window.click);
+      window.click.push($(this).parent().parent().find('h3').text())
+      console.log(window.click)
 		  $(this).prev().text(parseInt($(this).prev().text()) + 1);
       // Like buttons can only be clicked once
 		  $(this).attr("disabled", true);
@@ -355,7 +355,8 @@ $(function() {
         '&avtime='+window.interval_avatar+
         '&d='+encodeURI(window.description)+
         '&dtime='+window.interval_text+
-        '&cl='+window.click;
+        '&clnum='+window.click.length+
+        '&cl='+encodeURI(window.click);
     });
     
     },window.settings.tasklength); // timing for task
