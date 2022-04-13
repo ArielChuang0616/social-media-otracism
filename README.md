@@ -23,13 +23,13 @@ Wolf, W., Levordashka, A., Ruff, J. R., Kraaijeveld, S., Lueckmann, J.-M., & Wil
 
 Parameters
 ===========
-c: condition
-p: participant number
-u: participant username
-utime: time spent to enter username
-av: avatar number
-avtime: time spent to choose avatar
-d: participant self-description
-dtime: time spent to enter description
-clnum: number of likes the participant clicked
-cl: users the participant clicked to like (with '%2C' between each user)
+* c: condition
+* p: participant number
+* u: participant username
+* utime: time spent to enter username
+* av: avatar number
+* avtime: time spent to choose avatar
+* d: participant self-description
+* dtime: time spent to enter description
+* clnum: number of likes the participant clicked
+* cl: users the participant clicked to like (with '%2C' between each user)
