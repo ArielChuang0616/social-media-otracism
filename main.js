@@ -73,6 +73,14 @@ $(function() {
   
   // **Slide:** **Intro**     
   // With instructions regarding the task. The intro container is shown, the continue calls the next slide when clicked.
+  function init_lsas() {
+    $('#lsas').show();
+    $('#submit_lsas').on('click',function() {
+			$('#lsas').hide();
+  			init_intro();  			
+  	});	
+  }
+
   function init_intro() {
   	$('#intro').show();
   	$('#submit_intro').on('click',function() {
@@ -99,12 +107,12 @@ $(function() {
 
   		if(uname == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = '請輸入文字';
   			uname = "undefined";
   		}
   		if(not_alphanumeric(uname)) {
   			error = 1;
-  			errormsg = 'Please only letters (and no spaces)';
+  			errormsg = '僅限輸入文字（且請勿輸入空格）';
   		}  		
 
   		if(error == 0) {
@@ -112,7 +120,7 @@ $(function() {
 			window.username = $('#username').val();
   			init_avatar();  			
   		} else {
-  			alertify.log(errormsg,"error");
+  			alertify.log(errormsg,"錯誤");
   		}
       
       now_name = new Date().getTime();
@@ -146,7 +154,7 @@ $(function() {
   			window.avatarexport = /avatar_([^\s]+)/.exec(window.avatar)[1];
     			init_text();  			
     		} else {
-    			alertify.log("Please select an avatar","error");
+    			alertify.log("請選擇一個人像","error");
     		}
 
         now_avatar = new Date().getTime();
@@ -171,17 +179,17 @@ $(function() {
   		var error = 0;
   		if($('#description').val() == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = '請輸入文字';
   		}
   		if($('#description').val() !== "" && $('#description').val().length < 140) {
 		
   			error = 1;
-  			errormsg = 'Please write a bit more';
+  			errormsg = '請寫多一點嘛！';
 			}
   		if($('#description').val().length > 401) {
   		
   			error = 1;
-  			errormsg = 'Please enter less text';
+  			errormsg = '請刪減一些字數！';
   		}  		
   		if(error == 0) {
   			$('#text').hide();
@@ -192,7 +200,7 @@ $(function() {
           interval_text = (now_text - now_avatar)/1000;
           console.log("text interval:", interval_text)		
     		} else {
-    			alertify.log(errormsg,"error");
+    			alertify.log(errormsg,"錯誤");
     		}
   	});  	
   }
@@ -512,6 +520,6 @@ $(function() {
   adjust_to_condition();
 
   // Start with the intro slide
-  init_intro();
+  init_lsas();
 
 });

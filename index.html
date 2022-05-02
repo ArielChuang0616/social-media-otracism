@@ -38,13 +38,18 @@ If you don't have experience with programming, it is important that you alter on
 <script src="main.js"></script>
 <script src="stopwatch.js"></script>
 <script type="text/javascript" src="profiles.json"></script>
+<script> 
+  $(function(){
+    $("#lsas").load("lsas.html"); 
+  });
+</script> 
 
 </head>
 
 <body oncontextmenu="return false;">
 <div class="container">
 
-
+<div id="lsas" style="display:none;"></div>
 
 <div id="intro" style="display:none;" class="instr">
  <!-- 
@@ -55,21 +60,18 @@ If you don't have experience with programming, it is important that you alter on
 You can edit this text using basic HTML elements for styling (e.g., <br>, <h3>).
 
 */ 
---> <h3>Welcome to this study</h3>
 
-  You will complete a number of simple tasks, together with other people, <br>
-  with whom you will be connected via the internet. 
+--> <h3>歡迎！</h3>
+
+  您即將與其他參與者透過網路一同完成幾個簡單的任務。
   <br><br>
-  First, all participants in the study will select personal "avatars" and <br>
-  write short texts to introduce themselves.
+  首先，本次研究中所有參與者須選擇個人的頭像，並撰寫簡短的文字介紹自己。
   <br><br>
-  Before beginning the tasks, you will spend 3 minutes with the other <br>
-  people. During this time, you will be able to read and react to <br>
-  each-other's brief introductions.
+  在開始任務前，您將與其他參與者共度3分鐘，這段期間您將可以閱讀到彼此的簡介並給予回應。
   <br><br>
-  Specific instructions will follow.<br><br>
-  <b>Thank you!</b><br><br>
-  <button type="submit" id="submit_intro">Continue</button>
+  具體說明如下<br><br>
+  <b>謝謝</b><br><br>
+  <button type="submit" id="submit_intro">繼續</button>
 </div>
 
 
@@ -84,11 +86,11 @@ You can edit the instructions text for entering usernames below.
 
 */ 
 -->
-	<h3>Please enter your name</h3>
-	Could be your first name, nickname, or initials<br><br>
+	<h3>請輸入您的名稱</h3>
+	此名稱可以是您的名字、綽號、縮寫<br><br>
 	
 	<input type="text" id="username"  autocomplete="off" /><br>	<br>
-	<button type="submit"  id="submit_username">Submit</button><br>	<br>
+	<button type="submit"  id="submit_username">提交</button><br>	<br>
 </div>
 
 
@@ -102,11 +104,11 @@ You can edit the instructions text for entering usernames below.
 You can edit the instructions text. The text "Your choice of avatar will not be recorded or analyzed" depends on whether you record the choice of avatar.
 
 */ 
--->	<h3>Please select an avatar</h3>
-	This avatar will represent you during the group task, but will not be linked to any of your responses. <br>Your choice of avatar will not be recorded or analyzed.
+-->	<h3>請選擇一個頭像</h3>
+  在團體任務期間，這個頭像將代表您。
 	<br><br>
 	<div class="avatars"></div>
-	<br><button type="submit"  id="submit_avatar">Submit</button>
+	<br><button type="submit"  id="submit_avatar">提交</button>
 	<br><br>
 </div>	
 
@@ -120,13 +122,13 @@ You can edit the instructions text. The text "Your choice of avatar will not be 
 You can edit the instructions text. 
 
 */ 
--->	<h3>Please introduce yourself </h3>
-	Please write a paragraph in which you introduce yourself to the rest of the group. <br>
-	Write something you would like to tell about yourself - anything you want to share.
+-->	<h3>請簡單介紹您自己</h3>
+  請撰寫一個段落以向團體中的其他人介紹您自己，<br>
+	寫一些您想要述說的 —— 任何您想分享的事情。
 	<br><br>	
 	<textarea id="description" autocomplete="off" /></textarea><br>
-	<span id="count">Characters left: 400</span><br><br>
-	<button type="submit" id="submit_text">Submit</button>
+	<span id="count">剩餘字數: 400</span><br><br>
+	<button type="submit" id="submit_text">提交</button>
 </div>	
 
 
@@ -140,32 +142,31 @@ You can edit the instructions text.
 You can edit the instructions text. The prompt to try and form an impression of the other players is recommended in all ostacism paradigms. Defining the action of "liking" is also recommended. The information regarding task duration can be adjusted to match the actual duration you have set.
 
 */ 
--->  <h3>Group Introduction</h3>
-  Soon after connecting, you should be able to see the other people's descriptions. <br>
-  You can read and react to the short introduction they wrote about themselves, by <br>
-  clicking a "like" button, similar to the "like" button on Facebook ("favorite" on Twitter,<br> 
-  &hearts; in Tumblr and Instagram, etc.) <br>
+-->  <h3>團體介紹</h3>
+  在連線後，您很快就能看到其他人所寫的的描述。<br>
+  您可以閱讀他們所寫的簡短自我介紹，並點擊like按鈕給予回應，<br>
+  類似於facebook上的按「讚」(Twitter上的「收藏」，Tumblr與Instagram上的 &hearts; )。<br>
   <br>
-  Even though your interaction is minimal, please try to form an impression of the <br>
-  people in the group. Try to imagine them in real life - how they might look <br>
-  or sound, what kind of people they are, how you would get along with them.
-  <br><br>The task will last 3 minutes and is very important to the study, so please be attentive,
-  <br>without switching pages, or doing unrelated tasks. Questions about the other people <br>might follow.
-  <br><br><b>If these instructions are clear, you can proceed to log in.</b><br>
+  即使只有少量互動，請試試形成對團體中的人們的印象。<br>
+  試著想像他們在現實生活中的樣貌與聲音、他們會是甚麼樣的人、你會如何與他們相處。<br>
   <br>
-  <button type="submit"  id="submit_fb_intro">Log in</button>
+  這項任務將持續3分鐘，對此次研究非常重要，故請保持專注，<br>
+  不要切換頁面或做無關的任務。隨後可能會出現關於其他人的問題。<br>
+  <br>
+  <b>如果明瞭了這些說明，您可以繼續登入。</b><br>
+  <button type="submit"  id="submit_fb_intro">登入</button>
 </div>
 
 
 
 <div id="fb_login" style="display:none;" class="instr">
-  <h3>Establishing connection</h3>
-  Please wait while you are being connected to the other participants in your group.<br><br>
+  <h3>建立連結中</h3>
+  您正在連接至團體中的其他參與者，請稍候。<br><br>
   <img class="load" src='ajax-loader.gif' id="loader">
   <div id="msg_all_done" style="display:none;">
   <br>
-  	<b>All participants are now connected and you are ready to proceed.</b><br><br>
-  	<button type="submit"  id="submit_fb_login">Continue</button>
+  	<b>所有參與者現在皆已連線，您已準備好繼續。</b><br><br>
+  	<button type="submit"  id="submit_fb_login">繼續</button>
   </div>
 </div>
 
@@ -180,9 +181,9 @@ You can edit the instructions text.
 */ 
 -->
 <div id="task" style="display:none;">
-	<div id="countdown"><span class="secs" style="display: none;"></span>You can click "Like" if you have enjoyed somebody's description<br><br>time left:<br><span id="timer" class="cntr label label-info"></span>
+	<div id="countdown"><span class="secs" style="display: none;"></span>如果喜歡某個人的描述，您可以點擊like按鈕。<br><br>剩餘時間: <br><span id="timer" class="cntr label label-info"></span>
 	<br>
-	<button type="submit" id='final-continue' style="display:none;">Continue</button>	
+	<button type="submit" id='final-continue' style="display:none;">繼續</button>	
 	</div>
 </div>
 
