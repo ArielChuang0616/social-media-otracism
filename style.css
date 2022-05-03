@@ -34,9 +34,6 @@ input [type="radio"] {
   display:block; 
 }
 
-input [type="radio"] :hover {
-
-}
 input[type="checkbox"] {
   margin: 0;
   text-align: center;

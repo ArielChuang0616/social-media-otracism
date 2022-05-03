@@ -7,11 +7,14 @@
 $(function() {
 
   // **Parameters**
+  var now_inform = 0;
+  var now_lsas = 0;
   var now_intro = 0;
   var now_name = 0; 
   var now_text = 0; 
   var now_avatar = 0;
 
+  window.interval_lsas = 0;
   window.interval_name = 0;
   window.interval_avatar = 0;
   window.interval_text = 0;
@@ -75,23 +78,82 @@ $(function() {
   // With instructions regarding the task. The intro container is shown, the continue calls the next slide when clicked.
   function init_inform() {
     $('#inform').show();
-    $('#submit_inform').on('click',function() {
-			$('#inform').hide();
-  			init_lsas();  			
+
+    $('#submit_inform').unbind("click").on('click',function() {
+
+      if ( $('#inform1').is(":checked") && $('#inform2').is(":checked") && $('#inform3').is(":checked") ) {
+        if ($('input[name="inform4"]:checked').val() != null) {
+          if ($('input[name="inform5"]:checked').val() != null) {
+            if ($('#exp_name').attr("value") != "" && $('#exp_tel').attr("value") != "" && $('#exp_date').attr("value") != "") {
+
+              $('#inform').hide();
+              init_lsas();  
+
+              window.exp_name = $('#exp_name').attr("value")
+              console.log("exp name: ", window.exp_name);
+              window.exp_tel = $('#exp_tel').attr("value")
+              console.log("exp tel: ", window.exp_tel);
+              window.exp_date = $('#exp_date').attr("value")
+              console.log("exp date: ", window.exp_date);
+              window.exp_quit = $('input[name="inform4"]:checked').val()
+              console.log("exp quit: ", window.exp_quit)
+              window.exp_usage = $('input[name="inform5"]:checked').val()
+              console.log("exp usage: ", window.exp_usage)
+
+              now_inform = new Date().getTime();
+              console.log("submit inform time:", now_inform)
+
+            } else {
+              alert("請將研究參與者簽名處填寫完整")
+            }
+          } else {
+            alert("請選擇「若您退出實驗，有關您參加實驗所蒐集到的資料如何處理？」")
+          }
+        } else {
+          alert("請選擇「您參加實驗所蒐集到的資料未來以下列哪種方式使用？」")
+        }
+      } else {
+        alert("請勾選同意事項")
+      }
   	});	
   }
   
   function init_lsas() {
     $('#lsas').show();
-    $('#submit_lsas').on('click',function() {
-			$('#lsas').hide();
-  			init_intro();  			
+
+    // 測試用按鈕
+    $('#fill_lsas').unbind("click").on('click',function() {
+      $('select').val('2');
+    })
+
+    // 繼續
+    $('#submit_lsas').unbind("click").on('click',function() {
+
+      var unselected = 0
+      $('select').each(function(index, value){
+        if ($("option:selected", this).text() == " -- 請選擇程度 -- ") {
+          unselected = unselected + 1
+        }
+      });
+
+      if (unselected != 0) {
+        alert ("請將問卷填寫完整")
+      } else {
+
+        $('#lsas').hide();
+          init_intro();  	
+        
+        now_lsas = new Date().getTime();
+        console.log("submit lsas time:", now_lsas);
+        interval_lsas = (now_lsas - now_inform)/1000;
+        console.log("lsas interval:", interval_lsas);
+      }
   	});	
   }
 
   function init_intro() {
   	$('#intro').show();
-  	$('#submit_intro').on('click',function() {
+  	$('#submit_intro').unbind("click").on('click',function() {
 			$('#intro').hide();
   			init_name();  			
       
@@ -108,7 +170,7 @@ $(function() {
 
   	$('#name').show();
 
-  	$('#submit_username').on('click',function() {
+  	$('#submit_username').unbind("click").on('click',function() {
 
   		var error = 0;
   		var uname = $('#username').val();
@@ -150,12 +212,12 @@ $(function() {
   		$('.avatars').append('<img id="avatar_' + i+ '" src="avatars/avatar_' + i + '.png" class="avatar" />');
   	} 
 
-  	$('.avatar').on('click', function() {
+  	$('.avatar').unbind("click").on('click', function() {
   		$('.avatar').removeClass('selected');
   		$(this).addClass('selected');
   	});
 
-    	$('#submit_avatar').on('click',function() {
+    	$('#submit_avatar').unbind("click").on('click',function() {
     		if($('.selected').length == 1) {
   			$('#avatar').hide();
   			window.avatar = $('.selected').attr('id');
@@ -182,7 +244,7 @@ $(function() {
   	  $("#count").text("Characters left: " + (400 - $(this).val().length));
   	});
 
-  	$('#submit_text').on('click',function() {
+  	$('#submit_text').unbind("click").on('click',function() {
 
   		var error = 0;
   		if($('#description').val() == "") {
@@ -192,7 +254,7 @@ $(function() {
   		if($('#description').val() !== "" && $('#description').val().length < 140) {
 		
   			error = 1;
-  			errormsg = '請寫多一點嘛！';
+  			errormsg = '請寫多一點！';
 			}
   		if($('#description').val().length > 401) {
   		
@@ -218,7 +280,7 @@ $(function() {
   function init_fb_intro() {
   	$('#fb_intro').show();
 	
-  	$('#submit_fb_intro').on('click',function() {
+  	$('#submit_fb_intro').unbind("click").on('click',function() {
 
 			$('#fb_intro').hide();
  			init_fb_login();  			
@@ -238,7 +300,7 @@ $(function() {
   		$("#loader").hide();
   	}, 8000);
 	
-  	$('#submit_fb_login').on('click',function() {
+  	$('#submit_fb_login').unbind("click").on('click',function() {
 			$('#fb_login').hide();
   			init_task();  			
   	});	
@@ -334,7 +396,7 @@ $(function() {
 	 
 
     // Initialize like buttons
-	  $('.btn-like').on('click', function() {
+	  $('.btn-like').unbind("click").on('click', function() {
       window.click.push($(this).parent().parent().find('h3').text())
       console.log(window.click)
 		  $(this).prev().text(parseInt($(this).prev().text()) + 1);
@@ -359,10 +421,70 @@ $(function() {
 
     $('#timer').text('00:00');
     
-    $('#final-continue').on('click', function() {
+    $('#final-continue').unbind("click").on('click', function() {
 
       // Redirect link
       location.href = window.redirect+
+
+        //inform consent
+        '&name='+window.exp_name+
+        '&tel='+window.exp_tel+
+        '&date='+window.exp_date+
+        '&quit='+window.exp_quit+
+        '&usage='+window.exp_usage+
+
+        //lsas questionnaire
+        '&ltime='+window.interval_lsas+
+        '&1f='+$('#lsas1f').find('option:selected').text()+
+        '&1a='+$('#lsas1a').find('option:selected').text()+
+        '&2f='+$('#lsas2f').find('option:selected').text()+
+        '&2a='+$('#lsas2a').find('option:selected').text()+
+        '&3f='+$('#lsas3f').find('option:selected').text()+
+        '&3a='+$('#lsas3a').find('option:selected').text()+
+        '&4f='+$('#lsas4f').find('option:selected').text()+
+        '&4a='+$('#lsas4a').find('option:selected').text()+
+        '&5f='+$('#lsas5f').find('option:selected').text()+
+        '&5a='+$('#lsas5a').find('option:selected').text()+
+        '&6f='+$('#lsas6f').find('option:selected').text()+
+        '&6a='+$('#lsas6a').find('option:selected').text()+
+        '&7f='+$('#lsas7f').find('option:selected').text()+
+        '&7a='+$('#lsas7a').find('option:selected').text()+
+        '&8f='+$('#lsas8f').find('option:selected').text()+
+        '&8a='+$('#lsas8a').find('option:selected').text()+
+        '&9f='+$('#lsas9f').find('option:selected').text()+
+        '&9a='+$('#lsas9a').find('option:selected').text()+
+        '&10f='+$('#lsas10f').find('option:selected').text()+
+        '&10a='+$('#lsas10a').find('option:selected').text()+
+        '&11f='+$('#lsas11f').find('option:selected').text()+
+        '&11a='+$('#lsas11a').find('option:selected').text()+
+        '&12f='+$('#lsas12f').find('option:selected').text()+
+        '&12a='+$('#lsas12a').find('option:selected').text()+
+        '&13f='+$('#lsas13f').find('option:selected').text()+
+        '&13a='+$('#lsas13a').find('option:selected').text()+
+        '&14f='+$('#lsas14f').find('option:selected').text()+
+        '&14a='+$('#lsas14a').find('option:selected').text()+
+        '&15f='+$('#lsas15f').find('option:selected').text()+
+        '&15a='+$('#lsas15a').find('option:selected').text()+
+        '&16f='+$('#lsas16f').find('option:selected').text()+
+        '&16a='+$('#lsas16a').find('option:selected').text()+
+        '&17f='+$('#lsas17f').find('option:selected').text()+
+        '&17a='+$('#lsas17a').find('option:selected').text()+
+        '&18f='+$('#lsas18f').find('option:selected').text()+
+        '&18a='+$('#lsas18a').find('option:selected').text()+
+        '&19f='+$('#lsas19f').find('option:selected').text()+
+        '&19a='+$('#lsas19a').find('option:selected').text()+
+        '&20f='+$('#lsas20f').find('option:selected').text()+
+        '&20a='+$('#lsas20a').find('option:selected').text()+
+        '&21f='+$('#lsas21f').find('option:selected').text()+
+        '&21a='+$('#lsas21a').find('option:selected').text()+
+        '&22f='+$('#lsas22f').find('option:selected').text()+
+        '&22a='+$('#lsas22a').find('option:selected').text()+
+        '&23f='+$('#lsas23f').find('option:selected').text()+
+        '&23a='+$('#lsas23a').find('option:selected').text()+
+        '&24f='+$('#lsas24f').find('option:selected').text()+
+        '&24a='+$('#lsas24a').find('option:selected').text()+
+
+        //social otracism paradigm
         '&p='+window.participant+
         '&c='+window.condition+
         '&u='+encodeURI(window.username)+
