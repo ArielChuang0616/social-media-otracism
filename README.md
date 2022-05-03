@@ -31,7 +31,8 @@ informed consent:
 * quit: answer of quitting this experiment <br />
   (1 - 請刪除，不要列入這項實驗的後續資料分析, 2 - 無須刪除，可列入這項實驗的後續資料分析)
 * usage: answer of the experiment result usage <br />
-  (1 - 我同意在無法辨識我身份的情況下繼續提供研究團隊使用, 2 - 未來每次使用都必須徵求我的同意, 3 - 我不同意繼續提供研究團隊其他研究使用，本次研究結束請刪除)
+  (1 - 我同意在無法辨識我身份的情況下繼續提供研究團隊使用, 2 - 未來每次使用都必須徵求我的同意, 3 - 我不同意繼續提供研究團隊其他研究使用，本次研究結束請刪除) <br />
+  
 lsas questionnaire:
 * question number(1~24) + f/a: participant's answer for each fear/avoidance question
 
