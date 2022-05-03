@@ -24,7 +24,7 @@ Wolf, W., Levordashka, A., Ruff, J. R., Kraaijeveld, S., Lueckmann, J.-M., & Wil
 Parameters
 ===========
 
-informed consent:
+<b>informed consent:</b>
 * name: participant name
 * tel: participant tel num
 * date: participation date
@@ -33,10 +33,10 @@ informed consent:
 * usage: answer of the experiment result usage <br />
   (1 - 我同意在無法辨識我身份的情況下繼續提供研究團隊使用, 2 - 未來每次使用都必須徵求我的同意, 3 - 我不同意繼續提供研究團隊其他研究使用，本次研究結束請刪除) <br />
   
-lsas questionnaire:
+<b>lsas questionnaire:</b>
 * question number(1~24) + f/a: participant's answer for each fear/avoidance question
 
-social media otracism:
+<b>social media otracism:</b>
 * c: condition <br />
   (1 - ostracism condition, 2 - inclusion, 3 - overinclusion) <br />
   (so far the default is 1)
