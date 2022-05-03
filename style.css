@@ -6,6 +6,42 @@ body {
 	width: 800px;
 } 
 
+#exp-info {
+  border-color:#000000;
+  border-width: 5px;
+}
+
+hr.solid {
+  border-top: 1px solid rgb(9, 9, 9);
+}
+
+label {
+  border:1px solid #ccc;
+  padding:10px;
+  margin:0 0 10px;
+  display:block; 
+ }
+ 
+label:hover {
+  background:#eee;
+  cursor:pointer;
+}
+
+input [type="radio"] {
+  border:1px solid #ccc;
+  padding:10px;
+  margin:0 0 10px;
+  display:block; 
+}
+
+input [type="radio"] :hover {
+
+}
+input[type="checkbox"] {
+  margin: 0;
+  text-align: center;
+}
+
 .tophalf {
 	margin-bottom: 0px !important;
     background-color: #ffffff;

@@ -40,6 +40,7 @@ If you don't have experience with programming, it is important that you alter on
 <script type="text/javascript" src="profiles.json"></script>
 <script> 
   $(function(){
+    $("#inform").load("informed-consent.html");
     $("#lsas").load("lsas.html"); 
   });
 </script> 
@@ -48,6 +49,8 @@ If you don't have experience with programming, it is important that you alter on
 
 <body oncontextmenu="return false;">
 <div class="container">
+
+<div id="inform" style="display:none;"></div>
 
 <div id="lsas" style="display:none;"></div>
 

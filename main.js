@@ -73,6 +73,14 @@ $(function() {
   
   // **Slide:** **Intro**     
   // With instructions regarding the task. The intro container is shown, the continue calls the next slide when clicked.
+  function init_inform() {
+    $('#inform').show();
+    $('#submit_inform').on('click',function() {
+			$('#inform').hide();
+  			init_lsas();  			
+  	});	
+  }
+  
   function init_lsas() {
     $('#lsas').show();
     $('#submit_lsas').on('click',function() {
@@ -520,6 +528,6 @@ $(function() {
   adjust_to_condition();
 
   // Start with the intro slide
-  init_lsas();
+  init_inform();
 
 });
