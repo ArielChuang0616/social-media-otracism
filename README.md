@@ -28,16 +28,16 @@ informed consent:
 * name: participant name
 * tel: participant tel num
 * date: participation date
-* quit: answer of quitting this experiment
+* quit: answer of quitting this experiment__
   (1 - 請刪除，不要列入這項實驗的後續資料分析, 2 - 無須刪除，可列入這項實驗的後續資料分析)
-* usage: answer of the experiment result usage
+* usage: answer of the experiment result usage__
   (1 - 我同意在無法辨識我身份的情況下繼續提供研究團隊使用, 2 - 未來每次使用都必須徵求我的同意, 3 - 我不同意繼續提供研究團隊其他研究使用，本次研究結束請刪除)
 lsas questionnaire:
 * question number(1~24) + f/a: participant's answer for each fear/avoidance question
 
 social media otracism:
-* c: condition
-  (1 - ostracism condition, 2 - inclusion, 3 - overinclusion)
+* c: condition__
+  (1 - ostracism condition, 2 - inclusion, 3 - overinclusion)__
   (so far the default is 1)
 * p: participant number
 * u: participant username
