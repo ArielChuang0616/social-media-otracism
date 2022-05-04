@@ -209,7 +209,7 @@ $(function() {
   	$('#avatar').show();
 
     var avatars = window.settings.numberofavatars;    
-  	for(var i=0; i<avatars; i++) 
+  	for(var i=1; i<avatars; i++) 
   	{ 
   		$('.avatars').append('<img id="avatar_' + i+ '" src="avatars/avatar_' + i + '.png" class="avatar" />');
   	} 
