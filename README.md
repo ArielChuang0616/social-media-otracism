@@ -39,9 +39,10 @@ Parameters
 
 <b>social media otracism:</b>
 * c: condition <br />
-  (1 - ostracism condition, 2 - inclusion, 3 - overinclusion) <br />
-  (so far the default is 1)
-* p: participant number
+  (1 - ostracism or 2 - inclusion) <br />
+  (using Math.random() method)
+* p: participant number <br />
+  (default = 0)
 * u: participant username
 * utime: time spent to enter username
 * av: avatar number
