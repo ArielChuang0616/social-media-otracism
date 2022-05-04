@@ -27,6 +27,7 @@ Parameters
 <b>informed consent:</b>
 * name: participant name
 * tel: participant tel num
+* email: participant email
 * date: participation date
 * quit: answer of quitting this experiment <br />
   (1 - 請刪除，不要列入這項實驗的後續資料分析, 2 - 無須刪除，可列入這項實驗的後續資料分析)

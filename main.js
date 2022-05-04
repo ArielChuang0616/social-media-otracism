@@ -66,7 +66,7 @@ $(function() {
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
-    settings.likes_by = ['John','AncaD','Sarah','Arjen','Jane','George','Dan','Heather','Ky']; 
+    settings.likes_by = ['昕妍','承翰','潔翎666','志a0豪','QQ冠榮','婷','舒涵','p207介碩','1怡雯']; 
   }
   
   // -------------------
@@ -93,6 +93,8 @@ $(function() {
               console.log("exp name: ", window.exp_name);
               window.exp_tel = $('#exp_tel').attr("value")
               console.log("exp tel: ", window.exp_tel);
+              window.exp_email = $('#exp_email').attr("value")
+              console.log("exp email: ", window.exp_email);
               window.exp_date = $('#exp_date').attr("value")
               console.log("exp date: ", window.exp_date);
               window.exp_quit = $('input[name="inform4"]:checked').val()
@@ -429,6 +431,7 @@ $(function() {
         //inform consent
         '&name='+window.exp_name+
         '&tel='+window.exp_tel+
+        '&email='+window.exp_email+
         '&date='+window.exp_date+
         '&quit='+window.exp_quit+
         '&usage='+window.exp_usage+
@@ -500,16 +503,24 @@ $(function() {
     },window.settings.tasklength); // timing for task
 
   }
-	
 
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+	
   // Get URL parameters to set condition number and participant number
   function get_params() {
-    // condition number must be 1, 2, or 3
-    if(window.QueryString.c !== undefined && !isNaN(parseInt(window.QueryString.c)) && parseInt(window.QueryString.c) > 0 && parseInt(window.QueryString.c) < 4) {
-      window.condition = parseInt(window.QueryString.c);
-    } else {
-      window.condition = 1; // condition defaults to 1
-    }
+    // condition number must be 1 or 2
+    // if(window.QueryString.c !== undefined && !isNaN(parseInt(window.QueryString.c)) && parseInt(window.QueryString.c) > 0 && parseInt(window.QueryString.c) < 4) {
+    //   window.condition = parseInt(window.QueryString.c);
+    // } else {
+    //   window.condition = 1; // condition defaults to 1
+    // }
+
+    window.condition = getRandomInt(1,2);
+
     // participant number must be numeric
     if(window.QueryString.p !== undefined && !isNaN(parseInt(window.QueryString.p))) {
       window.participant = parseInt(window.QueryString.p);
@@ -647,6 +658,7 @@ $(function() {
   // Set Settings, get Participant No. and Condition No.
   set_settings();
   get_params();
+  console.log(window.condition)
   adjust_to_condition();
 
   // Start with the intro slide
