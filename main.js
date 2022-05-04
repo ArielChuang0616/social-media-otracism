@@ -241,7 +241,7 @@ $(function() {
   	$('#text').show();
 
   	$("#description").keyup(function(){
-  	  $("#count").text("Characters left: " + (400 - $(this).val().length));
+  	  $("#count").text("Characters left: " + (200 - $(this).val().length));
   	});
 
   	$('#submit_text').unbind("click").on('click',function() {
