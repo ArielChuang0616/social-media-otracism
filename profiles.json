@@ -4,69 +4,75 @@
 window.others = {
   "posts" : [
       {
-        "avatar": "avatars/others/george.png",
-        "username": "Georgeee",
-        "text": "I'm a 19 year old dude from Wisconsin (commence making fun of my accent). I love music and lately you can catch me listening to nothing but Joy Division, Echo & the bunnymen, and the smiths. Besides music I like learning languages, psychology, drawing, and writing.",
+        "avatar": "avatars/others/avatar_19.png",
+        "username": "p207介碩",
+        "text": "我是個感情敏感、認真負責的人，以前與人互動的時候總是在乎他人的回饋,也期許自己能成為同理他人ㄉ傾聽者,希望能與每個人建立好的互動關係。但在大學課業上遭遇重大挫折後,發現自己無法負荷繁重的課業,對原本科系的幻想變成負擔,成為最想逃離的惡夢〒.〒。然而,仍是堅持呈現自己最好的一面給他人,隱藏自己的焦慮無助不想打擾他人,因為失眠白天也無法専心上課,情緒變得暴躁,朋友不知道該如何是好，所以感覺慢慢被他們疏遠ㄌಥ⌣ಥ。",
         "likes": [45000, 50000, 110000, 150000] //4
       },
       {
-        "avatar": "avatars/others/sarah.png",
-        "username": "Sarah",
-        "text": "Let me introduce myself. I’m Sarah, married, and mother of two wonderful (grown up) children. My career has been a bit peculiar. Starting off as a graduate historian, I switched to an entirely different discipline: occupational assessor trying to help young people with disabilities to get a job. I’ve just retired and started spending more time on my hobbies, such as singing, reading, and playing volleyball.",
+        "avatar": "avatars/others/avatar_23.png",
+        "username": "C37gg建宏",
+        "text": "讀歷史系，是一個有好奇心、喜歡探索不同的新事物（尤其是常常到處趴趴走！），正在擔任踏溯台南助理，想讓參與的同學有品質的獲得台南在地的文化知識。這份一年半的助理經歷，給了我很多的啟發與實際操作經驗，希望能有效的把在歷史系所學的書本理論知識與工作流程結合。尤其我又特別擅長於排版及網頁美工和多媒體的製作，蠻希望自己未來的職涯能擔任那種文化知識傳遞的角色。美好生好中唯一的遺憾，就是我現在沒女友，求認養誒！",
         "likes": [12000, 14000,15000,35000,80000,100000,110000,150000,20000] //9
       },
       {
-        "avatar": "avatars/others/john.png",
-        "username": "John",
-        "text": "Hi there, I’m 57 years old, married, with two kids. I’ve been a computer programmer in the states for about 30 years, but don’t worry: I don’t have the dusty haircut, oversized buttoned shirt and nerdie big frame glasses. Looking forward to working with you all. Cheers, John",
+        "avatar": "avatars/others/avatar_22.png",
+        "username": "志a0豪",
+        "text": "馬來西亞人、生技系大一，目前對分子生物學、生物化學很有興趣，希望可以在這領域摸索更多有趣的議題！興趣是看電影，尤其是喜劇、動作、卡通這幾種。我另一個興趣是喝酒拉，如果認識新朋友我都會找機會跟他們一起喝。目前加了流舞社，蠻喜歡hiphop的，是蠻希望可以順利的學會更多的舞蹈動作來大秀一波！不過感覺系上好難認識人喔，每個人都在做自己的事，大家可以提供給我一點破冰的建議嗎？",
 		"likes": [20000, 21000] //2
       },
       {
-        "avatar": "avatars/others/anca.png",
-        "username": "AncaD",
-        "text": "I am a Computer Science student, interested in Natural Language processing. Also a lover of loose leaf tea and a Semantic Web enthusiast. I’m curious about what this task is about.",
+        "avatar": "avatars/others/avatar_20.png",
+        "username": "庭偉",
+        "text": "21 歲的今天仍然沒吃早餐，最近在實習。私人興趣上，喜歡逛市集。這學期參加了一些活動做了一些事,也或多或少多學會一些東西,但整個學期、我沒做出我應該有的取捨。但我卻也真切了解到在每個要做出取捨的當下,我其實都不覺得我「應該」捨這學期參加的所有大小活動社團課程裡,總感覺多少雷到了一些人,也總是事後才有感於一些有人很早以前就告訴我的事情。不過去不到也沒關係、真的沒關係,過得開心更重要。",
         "likes": [10000, 12000, 40000, 80000, 120000] //5
       },
       {
-        "avatar": "avatars/others/niki.png",
-        "username": "Nick",
-        "text": "My life revolves around rock climbing. I started climbing when I was 12 (turning 18 soon) and usually climb 4-5 hours a day. Climbing never bores me, because each time is different – the routes, the weather, my strength and endurance. It’s great!",
+        "avatar": "avatars/others/avatar_33.png",
+        "username": "承翰",
+        "text": "是ㄍ真正的聽團仔，最喜歡傷心欲絕，不太喜歡打很長、很有內涵、或者也以說那種大家不喜歡看的無趣長文。我一向喜歡發一些奇奇怪怪、講述身邊一些瑣碎小事的廢文。是說,其實我們做選擇都不是隨機的對吧?至少很多事是這樣，思考權衡取捨抉擇都是過去的那些，無法挽回或事前改變的過去，包括好的壞的,都被決定好了吧?所以我們都是自由的。",
         "likes": [40000, 450000, 90000, 100000, 150000, 155000] //6
       },
     {
-        "avatar": "avatars/others/mary.png",
-        "username": "Mary",
-        "text": "My name is Mary and I am 49 years old. I have a husband and 2 grown sons. My family and I lived in different countries. Our sons attended international schools wherever we went and since moving to China, I found work at those schools as well. Besides roaming around the world, I like playing games. Board games, cards, black jack or poker, mah jong, or silly games on Facebook, jig saws, basically anything",
+        "avatar": "avatars/others/avatar_28.png",
+        "username": "QQ冠榮",
+        "text": "早上好成大，現在我有機械系大二猴。宵夜蠻常吃紅記。最近在想下學期要不要加入成大喜劇練習講單口喜劇或漫才。實驗者跟我說要打兩百字左右，所以我打算盤點一下The本學期的感想：幹課好多好累。算一算發現現在還是離兩百字很遙遠，遙遠遙遠遙遠。話說最近天氣好好，然後我現在肚子好餓、也有點渴，不知道有沒有手搖店打折優惠，等等來找找好了ʕ •̀ o •́ ʔ啊大家為什麼會來參加這個實驗啊？沒綽，這個問題就是如此猝不及防。",
         "likes": [20000, 25000, 95000] //3
       },
       {
-        "avatar": "avatars/others/lauren.png",
-        "username": "Lauren",
-        "text": "I’m Lauren, I love to hang out with friends and go shopping. Just doing some online studies here!",
+        "avatar": "avatars/others/avatar_2.png",
+        "username": "婷",
+        "text": "雖然自己是個樂天派,但大二這年其實發現自己的笑容變少了,尤其大二上時課業和活動壓力大到常常自己偷偷在房間掉淚。不過回頭來看,這些彿都成為了生命中的養分,辛勞早已華成滿滿的回憶和成就感。19歲這年好像沒有想像中的雖，但20歲開始之後就厄運連連。有很多要抱怨的，但有更多值得感謝的事情，像是身邊的所有人跟勇敢的自己。",
         "likes": [12000, 38000] //1
       },
           {
-        "avatar": "avatars/others/kim.png",
-        "username": "Ky",
-        "text": "Hey, guys. I'm 19, native Korean. I've been in America for about four years now.I consider myself pretty nice, though not a total angel. I just like being friendly to people I meet. In my spare time, I like making all kinds of friends, having conversations about whatever, looking at paintings, using makeup, reading, singing (show choir representtt!), making jewelry, and eating delicious food. Enjoy your day, stay out of trouble. <3",
+        "avatar": "avatars/others/avatar_6.png",
+        "username": "潔翎666",
+        "text": "最近的假日是一點山、一點海、一點老街、一點博物館 最近給自己的期許是每週假日都要出門，還是掩不住我期待的心情!有人在曬恩愛、有人在閒話家常、有人在獨自漫步、有人在拍夕陽、有人在自拍、有人坐在那思考著人生。我想這就是生活，這樣也不錯。",
         "likes": [10000, 50000, 88000, 11000, 11500, 120000, 15000] //7
       },
       {
-        "avatar": "avatars/others/arjen.png",
-        "username": "Arjen",
-        "text": "My name's Arjen, I study Artificial Intelligence. Also I like to use my free time to make all kinds of different things... I'm kind of a nerd too, I guess.",
+        "avatar": "avatars/others/avatar_12.png",
+        "username": "舒涵",
+        "text": "對於有感情的地方，我們說「回」。對於新鮮的地方，我們說「去」。果然對有感情的地方,動詞使用「回」，從工資管畢業後永遠都是「回」台南，因為我們是在台南讀書的孩子。是呀!就像遊子會思鄉、遠足的人會想家，畢業的學子永遠會想念母校的孕育。上週回台南感受到好多上班時不會感受到的情緒，懷念的、多善的、美好的、青春的、無懼的、單純的。但是是喜歡搬去另一個城市居住、重新認識一個城市的感覺的。",
         "likes": [12000, 40000, 120000] //3
       },
       {
-        "avatar": "avatars/others/heather.png",
-        "username": "Heather",
-        "text": "Just now I'm finishing up my first year of a difficult science curriculum in university. I also work at a cosmetics counter as a part-time thing and earn some money online in my free time. I have a lot planned for my future, and it's really exciting. I want to grow up and be a doctor with a family of lots of little dogs. It'll be fantastic.",
+        "avatar": "avatars/others/avatar_8.png",
+        "username": "1怡雯",
+        "text": "時光匆青春高三生考完學測在尖叫，廢物大三生想著沒有頭緒的未來在苦笑。希望以後能夠變聰明，然後可以過濾掉多一點雜質廢物。近來真的是在一陣慌亂中度過,時間忽快忽慢的感覺,情緒也是跟雲霄飛車一樣,所幸那些以為過不了的都關關難過關關過了,然後愛的人都在身邊，那就是黑暗中充滿希望、最亮的那顆星。今年的我是個探索家，探索自我以及未知的領域，好多的第一次成就這有趣的2022。以後回想起來會一邊微笑一邊心暖暖一邊感動流淚的那種。",
         "likes": [13000, 50000, 80000, 88000, 120000] //5
       },
       {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
+        "avatar": "avatars/others/avatar_14.png",
+        "username": "昕妍",
+        "text": "在這些陽光普照卻依舊是個過於涼爽的交換日子裡,簡短的幾週內,發現了許多以前都沒見著的美好,語詞在分秒的流逝中變得鬆弛,一瞬間竟然覺得自己在這裡擁有了家人，但我依然是那個很宅的航太系女生。我們不可能完全理解彼此,就好比愛無法拯救一切,可在理解之外,還有許多我們能做的,像是包、體諒、退讓,而這些都是因為愛。",
+        "likes": [10000, 50000] //6
+      },
+      {
+        "avatar": "avatars/others/avatar_17.png",
+        "username": "ㄓ芸",
+        "text": "凌晨零點從沒有咖啡徒步3.4km回家,樓前買了一罐十八天直達頂樓,坐在煤氣小精靈的屋頂上繼續夜晚。對廣闊的空間適應不良,我也害怕廣場。以前交往跟生活是兩回事,喜歡一個人,可是找伴太徒勞了,結伴太傷感情了。我甚至沒有不敢單獨動的事,電影自己看更專心、購物一個人去更自在、獨自旅行更心所欲。沒料到過了一年情況默默地變了,生活片段不再全是碎爛的灰,就連秋末的意象也染上冬日相擁的暖色。一起相處的日子很舒適快樂,讓我確信真切地被愛就不需刻意張揚,也終於可以不靠任何虛華文字或敘述來包裝一段關係。",
         "likes": [10000, 50000] //6
       },
 

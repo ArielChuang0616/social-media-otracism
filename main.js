@@ -251,12 +251,12 @@ $(function() {
   			error = 1;
   			errormsg = '請輸入文字';
   		}
-  		if($('#description').val() !== "" && $('#description').val().length < 140) {
+  		if($('#description').val() !== "" && $('#description').val().length < 100) {
 		
   			error = 1;
   			errormsg = '請寫多一點！';
 			}
-  		if($('#description').val().length > 401) {
+  		if($('#description').val().length > 201) {
   		
   			error = 1;
   			errormsg = '請刪減一些字數！';
