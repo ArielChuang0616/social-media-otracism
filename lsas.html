@@ -1,397 +1,314 @@
 <div>
+    <link href="style.css" rel="stylesheet">
     <script src="main.js"></script>
-    <table>
+    <table id="lsas" style="table-layout: fixed ; width: 100%;">
 
         <!-- 表格標題 -->
-        <tr>
-            <th>情境</th>
-            <th>焦慮/恐懼</th>
-            <th>迴避</th>
+        <tr class="lsas-header">
+            <th width="100%/3">情境</th>
+            <th colspan="4" width="100%/3">焦慮/恐懼</th>
+            <th colspan="4" width="100%/3">迴避</th>
+        </tr>
+        <tr class="lsas-header">
+            <th></th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
         </tr>
       
         <!-- 第一題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>公開場合使用電話</td>
-            <td>
-                <select id="lsas1f">
-                    <option disabled selected value value="-1"> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas1a">
-                    <option disabled selected value value="-1"> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas1f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas1f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas1f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas1f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas1a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas1a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas1a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas1a" value="3"></td>
         </tr>
         <!-- 第二題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>參與小型團體活動</td>
-            <td>
-                <select id="lsas2f">
-                    <option disabled selected value value="-1"> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas2a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas2f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas2f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas2f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas2f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas2a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas2a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas2a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas2a" value="3"></td>
         </tr>
         <!-- 第三題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>公開場合進食</td>
-            <td>
-                <select id="lsas3f">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas3a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas3f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas3f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas3f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas3f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas3a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas3a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas3a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas3a" value="3"></td>
         </tr>
         <!-- 第四題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>和他人一起喝酒</td>
-            <td>
-                <select id="lsas4f">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas4a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas4f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas4f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas4f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas4f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas4a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas4a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas4a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas4a" value="3"></td>
         </tr>
         <!-- 第五題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>和權威人士交談</td>
-            <td>
-                <select id="lsas5f">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas5a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas5f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas5f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas5f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas5f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas5a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas5a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas5a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas5a" value="3"></td>
             </td>
         </tr>
         <!-- 第六題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>在一位觀眾面前演戲、表演或演講</td>
-            <td>
-                <select id="lsas6f">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas6a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas6f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas6f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas6f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas6f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas6a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas6a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas6a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas6a" value="3"></td>
         </tr>
         <!-- 第七題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>參加派對</td>
-            <td>
-                <select id="lsas7f">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas7a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas7f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas7f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas7f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas7f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas7a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas7a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas7a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas7a" value="3"></td>
         </tr>        
         <!-- 第八題 -->
-        <tr>
+        <tr class="lsas-tr">
             <td>在他人注視下工作</td>
-            <td>
-                <select id="lsas8f">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
-            <td>
-                <select id="lsas8a">
-                    <option disabled selected value> -- 請選擇程度 -- </option>
-                    <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                </select>
-            </td>
+            <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas8f" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas8f" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas8f" value="2"></td>
+            <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas8f" value="3"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas8a" value="0"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas8a" value="1"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas8a" value="2"></td>
+            <td style="text-align:center;"><input type="radio" name="lsas8a" value="3"></td>
         </tr>
      <!-- 第九題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>在他人注視下寫作</td>
-        <td>
-            <select id="lsas9f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas9a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas9f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas9f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas9f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas9f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas9a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas9a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas9a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas9a" value="3"></td>
     </tr>
      <!-- 第十題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>打電話給你不太熟的人</td>
-        <td>
-            <select id="lsas10f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas10a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas10f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas10f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas10f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas10f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas10a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas10a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas10a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas10a" value="3"></td>
     </tr>
      <!-- 第十一題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>與你不太熟的人面對面交談</td>
-        <td>
-            <select id="lsas11f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas11a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas11f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas11f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas11f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas11f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas11a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas11a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas11a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas11a" value="3"></td>
     </tr>
      <!-- 第十二題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>和陌生人見面</td>
-        <td>
-            <select id="lsas12f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas12a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas12f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas12f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas12f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas12f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas12a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas12a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas12a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas12a" value="3"></td>
     </tr>
      <!-- 第十三題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>在公共浴室小便</td>
-        <td>
-            <select id="lsas13f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas13a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas13f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas13f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas13f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas13f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas13a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas13a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas13a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas13a" value="3"></td>
     </tr>
      <!-- 第十四題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>在他人已經入座時進入房間</td>
-        <td>
-            <select id="lsas14f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas14a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas14f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas14f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas14f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas14f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas14a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas14a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas14a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas14a" value="3"></td>
     </tr>
      <!-- 第十五題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>成為關注焦點</td>
-        <td>
-            <select id="lsas15f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas15a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas15f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas15f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas15f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas15f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas15a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas15a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas15a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas15a" value="3"></td>
     </tr>
      <!-- 第十六題 -->
-     <tr>
+     <tr class="lsas-tr">
         <td>在會議中發言</td>
-        <td>
-            <select id="lsas16f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas16a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas16f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas16f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas16f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas16f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas16a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas16a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas16a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas16a" value="3"></td>
     </tr>
     <!-- 第十七題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>接受對你能力、技能或知識的測驗</td>
-        <td>
-            <select id="lsas17f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas17a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas17f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas17f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas17f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas17f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas17a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas17a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas17a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas17a" value="3"></td>
     </tr>
     <!-- 第十八題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>對你不太熟的人表達不同意或不贊成</td>
-        <td>
-            <select id="lsas18f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas18a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas18f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas18f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas18f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas18f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas18a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas18a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas18a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas18a" value="3"></td>
     </tr>
     <!-- 第十九題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>直視著你不太熟的人的眼睛看</td>
-        <td>
-            <select id="lsas19f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas19a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas19f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas19f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas19f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas19f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas19a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas19a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas19a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas19a" value="3"></td>
     </tr>
     <!-- 第二十題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>給小組做口頭報告</td>
-        <td>
-            <select id="lsas20f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas20a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas20f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas20f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas20f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas20f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas20a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas20a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas20a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas20a" value="3"></td>
     </tr>
     <!-- 第二十一題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>試著認識某人以發展浪漫/性關係</td>
-        <td>
-            <select id="lsas21f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas21a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas21f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas21f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas21f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas21f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas21a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas21a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas21a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas21a" value="3"></td>
     </tr>
     <!-- 第二十二題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>為了退款，退貨回店家</td>
-        <td>
-            <select id="lsas22f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas22a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas22f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas22f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas22f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas22f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas22a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas22a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas22a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas22a" value="3"></td>
     </tr>
     <!-- 第二十三題 -->
-    <tr>
+    <tr class="lsas-tr">
         <td>舉辦派對</td>
-        <td>
-            <select id="lsas23f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas23a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="text-align:center; border-left: 1px solid #ccc;"><input type="radio" name="lsas23f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas23f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas23f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas23f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas23a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas23a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas23a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas23a" value="3"></td>
     </tr>
     <!-- 第二十四題 -->
     <tr>
-        <td>抵制高壓的推銷員</td>
-        <td>
-            <select id="lsas24f">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
-        <td>
-            <select id="lsas24a">
-                <option disabled selected value> -- 請選擇程度 -- </option>
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
-            </select>
-        </td>
+        <td style="padding: 10px;">抵制高壓的推銷員</td>
+        <td style="text-align:center; padding: 10px; border-left: 1px solid #ccc;"><input type="radio" name="lsas24f" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas24f" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas24f" value="2"></td>
+        <td style="text-align:center; border-right: 1px solid #ccc;"><input type="radio" name="lsas24f" value="3"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas24a" value="0"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas24a" value="1"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas24a" value="2"></td>
+        <td style="text-align:center;"><input type="radio" name="lsas24a" value="3"></td>
     </tr>
 
     </table>

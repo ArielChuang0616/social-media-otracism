@@ -55,14 +55,11 @@ $(function() {
     // In condition 2, user will receive 6 likes at the following timepoints (in ms). Default: [10000, 15000,35000,80000,1320000,150000]
     settings.condition_2_likes = [10000, 15000,35000,80000,1320000,150000];  
     
-    // In condition 3, user will receive 9 likes at the following timepoints (in ms). Default: [10000, 11000,15000,35000,80000,100000,110000,150000,20000]
-    settings.condition_3_likes = [10000, 11000,15000,35000,80000,100000,110000,150000,20000]; 
 
 	// **Others' likes**     
-	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
+	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion.
 	settings.condition_1_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,20000]; // 9
 	settings.condition_2_adjusted_likes = [12000, 14000,15000,35000,80000]; // 5
-	settings.condition_3_adjusted_likes = [12000, 9999999]; //1	
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
@@ -123,22 +120,23 @@ $(function() {
   function init_lsas() {
     $('#lsas').show();
 
-    // 測試用按鈕
-    $('#fill_lsas').unbind("click").on('click',function() {
-      $('select').val('2');
-    })
+    // // 測試用按鈕
+    // $('#fill_lsas').unbind("click").on('click',function() {
+    //   $('input:radio').each(function() {
+    //     $(this).value("2").prop('checked', true);
+    //   })
+    // })
 
     // 繼續
     $('#submit_lsas').unbind("click").on('click',function() {
 
-      var unselected = 0
-      $('select').each(function(index, value){
-        if ($("option:selected", this).text() == " -- 請選擇程度 -- ") {
-          unselected = unselected + 1
-        }
+      var checked = 0;
+
+      $("#lsas input[type=radio]:checked").each(function() {
+        checked = checked + 1;
       });
 
-      if (unselected != 0) {
+      if (checked < 24) {
         alert ("請將問卷填寫完整")
       } else {
 
@@ -438,54 +436,54 @@ $(function() {
 
         //lsas questionnaire
         '&ltime='+window.interval_lsas+
-        '&1f='+$('#lsas1f').find('option:selected').text()+
-        '&1a='+$('#lsas1a').find('option:selected').text()+
-        '&2f='+$('#lsas2f').find('option:selected').text()+
-        '&2a='+$('#lsas2a').find('option:selected').text()+
-        '&3f='+$('#lsas3f').find('option:selected').text()+
-        '&3a='+$('#lsas3a').find('option:selected').text()+
-        '&4f='+$('#lsas4f').find('option:selected').text()+
-        '&4a='+$('#lsas4a').find('option:selected').text()+
-        '&5f='+$('#lsas5f').find('option:selected').text()+
-        '&5a='+$('#lsas5a').find('option:selected').text()+
-        '&6f='+$('#lsas6f').find('option:selected').text()+
-        '&6a='+$('#lsas6a').find('option:selected').text()+
-        '&7f='+$('#lsas7f').find('option:selected').text()+
-        '&7a='+$('#lsas7a').find('option:selected').text()+
-        '&8f='+$('#lsas8f').find('option:selected').text()+
-        '&8a='+$('#lsas8a').find('option:selected').text()+
-        '&9f='+$('#lsas9f').find('option:selected').text()+
-        '&9a='+$('#lsas9a').find('option:selected').text()+
-        '&10f='+$('#lsas10f').find('option:selected').text()+
-        '&10a='+$('#lsas10a').find('option:selected').text()+
-        '&11f='+$('#lsas11f').find('option:selected').text()+
-        '&11a='+$('#lsas11a').find('option:selected').text()+
-        '&12f='+$('#lsas12f').find('option:selected').text()+
-        '&12a='+$('#lsas12a').find('option:selected').text()+
-        '&13f='+$('#lsas13f').find('option:selected').text()+
-        '&13a='+$('#lsas13a').find('option:selected').text()+
-        '&14f='+$('#lsas14f').find('option:selected').text()+
-        '&14a='+$('#lsas14a').find('option:selected').text()+
-        '&15f='+$('#lsas15f').find('option:selected').text()+
-        '&15a='+$('#lsas15a').find('option:selected').text()+
-        '&16f='+$('#lsas16f').find('option:selected').text()+
-        '&16a='+$('#lsas16a').find('option:selected').text()+
-        '&17f='+$('#lsas17f').find('option:selected').text()+
-        '&17a='+$('#lsas17a').find('option:selected').text()+
-        '&18f='+$('#lsas18f').find('option:selected').text()+
-        '&18a='+$('#lsas18a').find('option:selected').text()+
-        '&19f='+$('#lsas19f').find('option:selected').text()+
-        '&19a='+$('#lsas19a').find('option:selected').text()+
-        '&20f='+$('#lsas20f').find('option:selected').text()+
-        '&20a='+$('#lsas20a').find('option:selected').text()+
-        '&21f='+$('#lsas21f').find('option:selected').text()+
-        '&21a='+$('#lsas21a').find('option:selected').text()+
-        '&22f='+$('#lsas22f').find('option:selected').text()+
-        '&22a='+$('#lsas22a').find('option:selected').text()+
-        '&23f='+$('#lsas23f').find('option:selected').text()+
-        '&23a='+$('#lsas23a').find('option:selected').text()+
-        '&24f='+$('#lsas24f').find('option:selected').text()+
-        '&24a='+$('#lsas24a').find('option:selected').text()+
+        '&1f='+$('input[name="lsas1f"]:checked').val()+
+        '&1a='+$('input[name="lsas1a"]:checked').val()+
+        '&2f='+$('input[name="lsas2f"]:checked').val()+
+        '&2a='+$('input[name="lsas2a"]:checked').val()+
+        '&3f='+$('input[name="lsas3f"]:checked').val()+
+        '&3a='+$('input[name="lsas3a"]:checked').val()+
+        '&4f='+$('input[name="lsas4f"]:checked').val()+
+        '&4a='+$('input[name="lsas4a"]:checked').val()+
+        '&5f='+$('input[name="lsas5f"]:checked').val()+
+        '&5a='+$('input[name="lsas5a"]:checked').val()+
+        '&6f='+$('input[name="lsas6f"]:checked').val()+
+        '&6a='+$('input[name="lsas6a"]:checked').val()+
+        '&7f='+$('input[name="lsas7f"]:checked').val()+
+        '&7a='+$('input[name="lsas7a"]:checked').val()+
+        '&8f='+$('input[name="lsas8f"]:checked').val()+
+        '&8a='+$('input[name="lsas8a"]:checked').val()+
+        '&9f='+$('input[name="lsas9f"]:checked').val()+
+        '&9a='+$('input[name="lsas9a"]:checked').val()+
+        '&10f='+$('input[name="lsas10f"]:checked').val()+
+        '&10a='+$('input[name="lsas10a"]:checked').val()+
+        '&11f='+$('input[name="lsas11f"]:checked').val()+
+        '&11a='+$('input[name="lsas11a"]:checked').val()+
+        '&12f='+$('input[name="lsas12f"]:checked').val()+
+        '&12a='+$('input[name="lsas12a"]:checked').val()+
+        '&13f='+$('input[name="lsas13f"]:checked').val()+
+        '&13a='+$('input[name="lsas13a"]:checked').val()+
+        '&14f='+$('input[name="lsas14f"]:checked').val()+
+        '&14a='+$('input[name="lsas14a"]:checked').val()+
+        '&15f='+$('input[name="lsas15f"]:checked').val()+
+        '&15a='+$('input[name="lsas15a"]:checked').val()+
+        '&16f='+$('input[name="lsas16f"]:checked').val()+
+        '&16a='+$('input[name="lsas16a"]:checked').val()+
+        '&17f='+$('input[name="lsas17f"]:checked').val()+
+        '&17a='+$('input[name="lsas17a"]:checked').val()+
+        '&18f='+$('input[name="lsas18f"]:checked').val()+
+        '&18a='+$('input[name="lsas18a"]:checked').val()+
+        '&19f='+$('input[name="lsas19f"]:checked').val()+
+        '&19a='+$('input[name="lsas19a"]:checked').val()+
+        '&20f='+$('input[name="lsas20f"]:checked').val()+
+        '&20a='+$('input[name="lsas20a"]:checked').val()+
+        '&21f='+$('input[name="lsas21f"]:checked').val()+
+        '&21a='+$('input[name="lsas21a"]:checked').val()+
+        '&22f='+$('input[name="lsas22f"]:checked').val()+
+        '&22a='+$('input[name="lsas22a"]:checked').val()+
+        '&23f='+$('input[name="lsas23f"]:checked').val()+
+        '&23a='+$('input[name="lsas23a"]:checked').val()+
+        '&24f='+$('input[name="lsas24f"]:checked').val()+
+        '&24a='+$('input[name="lsas24a"]:checked').val()+
 
         //social otracism paradigm
         '&p='+window.participant+
@@ -556,10 +554,6 @@ $(function() {
 		case 2:
 			window.settings.condition_likes = settings.condition_2_likes;
 			window.others.posts[1].likes = settings.condition_2_adjusted_likes;
-			break;
-		case 3:
-			window.settings.condition_likes = settings.condition_3_likes;
-			window.others.posts[1].likes = settings.condition_3_adjusted_likes;
 			break;
 	}	
 	  

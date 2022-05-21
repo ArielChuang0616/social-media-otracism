@@ -15,14 +15,14 @@ hr.solid {
   border-top: 1px solid rgb(9, 9, 9);
 }
 
-label {
+.informed-label {
   border:1px solid #ccc;
   padding:10px;
   margin:0 0 10px;
   display:block; 
  }
  
-label:hover {
+ .informed-label:hover {
   background:#eee;
   cursor:pointer;
 }
@@ -300,4 +300,28 @@ affected.
 
 .stopwatch .time {
   font-size: 150%;
+}
+
+#lsas {
+  width: 100%;
+  padding: 30px;
+  border-spacing:0;
+}
+
+.lsas-header th {
+  padding: 10px;
+}
+
+.lsas-tr td {
+  border-bottom:1px solid #ccc;
+  padding: 10px;
+}
+
+.lsas-tr:hover {
+  background:#eee;
+}
+
+input[type=radio] {
+  height: 1.5em;
+  cursor:pointer;
 }
