@@ -180,10 +180,10 @@ $(function() {
   			errormsg = '請輸入文字';
   			uname = "undefined";
   		}
-  		if(not_alphanumeric(uname)) {
-  			error = 1;
-  			errormsg = '僅限輸入文字（且請勿輸入空格）';
-  		}  		
+  		// if(not_alphanumeric(uname)) {
+  		// 	error = 1;
+  		// 	errormsg = '僅限輸入文字（且請勿輸入空格）';
+  		// }  		
 
   		if(error == 0) {
 			$('#name').hide();
@@ -241,7 +241,7 @@ $(function() {
   	$('#text').show();
 
   	$("#description").keyup(function(){
-  	  $("#count").text("Characters left: " + (200 - $(this).val().length));
+  	  $("#count").text("目前字數: " + ($(this).val().length));
   	});
 
   	$('#submit_text').unbind("click").on('click',function() {
