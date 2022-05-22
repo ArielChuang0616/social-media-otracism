@@ -1,6 +1,15 @@
 <div>
     <link href="style.css" rel="stylesheet">
     <script src="main.js"></script>
+    <div>
+        請儘快選出符合自身感受的答案，選不出時候以<span style="color: brown">直覺填答</span>即可！<br>
+        &#8226; 仔細閱讀每一種情形，並回答關於該情形的兩個問題<br>
+        &#8226; 第一個問題詢問您在該情形下感受到的焦慮或恐懼程度<br>
+        &#8226; 第二個問題詢問您迴避該情形的頻率<br>
+        &#8226; 如果您遇到平常所不會體驗到的情形，您可以想像「要是您面對該情形會怎麼樣」，<br>
+        &nbsp; 並評分您在這個假設情形下的恐懼程度，以及您將傾向於迴避的頻率。<br>
+        請基於您上週（近期）的情況，對您的影響方式進行評分。<br>
+    </div>
     <table id="lsas" style="table-layout: fixed ; width: 100%;">
 
         <!-- 表格標題 -->
@@ -19,6 +28,17 @@
             <th>1</th>
             <th>2</th>
             <th>3</th>
+        </tr>
+        <tr class="lsas-header">
+            <th></th>
+            <th>從未</th>
+            <th>輕微</th>
+            <th>中度</th>
+            <th>重度</th>
+            <th>無</th>
+            <th>偶爾</th>
+            <th>時常</th>
+            <th>總是</th>
         </tr>
       
         <!-- 第一題 -->
@@ -314,5 +334,4 @@
     </table>
 
     <button type="submit" id="submit_lsas">繼續</button>
-    <button type="button" id="fill_lsas">測試用（填入分數）</button>
 </div>
