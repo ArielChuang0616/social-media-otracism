@@ -517,7 +517,8 @@ $(function() {
     //   window.condition = 1; // condition defaults to 1
     // }
 
-    window.condition = getRandomInt(1,2);
+    // window.condition = getRandomInt(1,2);
+    window.condition = 1;
 
     // participant number must be numeric
     if(window.QueryString.p !== undefined && !isNaN(parseInt(window.QueryString.p))) {
